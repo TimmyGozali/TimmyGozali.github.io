@@ -1,4 +1,4 @@
-const dmgReductions = {
+const damage = {
    "Clan Ship": {
       "Tap": 0,
       "Hero": 1,
@@ -190,5 +190,53 @@ const dmgReductions = {
       "Tap from Heroes": 1,
       "Companion": 0,
       "All Prob": 1.6
+   }
+};
+
+const gold = {
+   "Fairy": {
+      "All": 1,
+      "Chesterson": 1,
+      "Jackpot": 1,
+      "Boss": 0,
+      "Fairy": 1,
+      "HoG": 0,
+      "HoM": 0.6,
+      "Multi Titan": 0,
+      "Specialty": 1,
+      "Chesterson chance": 1,
+      "Armor": 1,
+      "Tactical Insight": 83,
+      "Companion Warfare": 1
+   },
+   "Heart of Gold": {
+      "All": 1,
+      "Chesterson": 0,
+      "Jackpot": 1,
+      "Boss": 1,
+      "Fairy": 0,
+      "HoG": 1,
+      "HoM": 0.6,
+      "Multi Titan": 0,
+      "Specialty": 1,
+      "Chesterson chance": 0,
+      "Armor": 1,
+      "Tactical Insight": 79,
+      "Companion Warfare": 1
+   },
+   "Chesterson": {
+      "All": 1,
+      "Chesterson": 1,
+      "Jackpot": 1,
+      "Boss": 0,
+      "Fairy": 0,
+      "HoG": 0,
+      "HoM": 1,
+      "Multi Titan": 1,
+      "Specialty": 0,
+      "Chesterson chance": 1,
+      "Armor": 1,
+      "Tactical Insight": 78,
+      "Companion Warfare": 1
    }
 }
