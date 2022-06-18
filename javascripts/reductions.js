@@ -1,5 +1,5 @@
 const damage = {
-   "Clan Ship": {
+   CS : {
       "Tap": 0,
       "Hero": 1,
       "All": 1,
