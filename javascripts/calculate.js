@@ -27,22 +27,26 @@ function calculateEfficiency(skill) {
   var costSP = Number(skill[cost(skill, 0)]);
   
   //get reduction
-  /*
-  1) map all BonusTypeA and BonusTypeB to a source from the Reductions table.
-  2) match BonusTypeA/B to the source.
+  const bonusTypeA = skill["BonusTypeA"];
+  const bonusTypeB = skill["BonusTypeB"];  
   
-  see const Types
-  see var TypeConversions
+  var reductionA;
+  if (typeGold.hasOwnProperty(bonusTypeA)) {
+    reduction = /*"goldEff" * */ Number(gold[ChoiceGold]["bonusTypeA"]);
+  } else {
+      reduction = Number(damage[ChoiceDamage]["bonusTypeA"]);
+  }  
   
-  Type = TypeConversions['BonusType'] (tap, hero, ds, etc..)
-  reduction = choice(damage/gold).Type
-  */
+  var reductionB;
+  if (typeGold.hasOwnProperty(bonusTypeB)) {
+    reduction = /*"goldEff" * */ Number(gold[ChoiceGold]["bonusTypeB"]);
+  } else {
+      reduction = Number(damage[ChoiceDamage]["bonusTypeB"]);
+  }
   
-  var reductionDamage;
   
   
-  
-  return efficiency(curBonusA, nextBonusA, 
+  return efficiency(curBonusA, nextBonusA, reductionA, costSP)
   
   
 }
