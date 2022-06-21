@@ -1,3 +1,4 @@
+/*
 var skills;
 
 fetch('https://raw.githubusercontent.com/TimmyGozali/FirstProject/main/test.json')
@@ -10,4 +11,4 @@ fetch('https://raw.githubusercontent.com/TimmyGozali/FirstProject/main/test.json
 function add(a, b) {
     return a+b
     }
-
+*/
