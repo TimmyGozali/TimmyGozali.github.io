@@ -48,7 +48,13 @@ function calculateEfficiency(skill) {
   
   return efficiency(curBonusA, nextBonusA, reductionA, costSP)
   
-  
+  /*
+    see SPJsonArray
+    see tarr
+    see .push
+    
+    add .level to keep track of current level and properly use this function
+  */
 }
 
 function efficiency(a, b, reduction, sp) {
