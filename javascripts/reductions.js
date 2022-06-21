@@ -29,7 +29,8 @@ const damage = {
       "Companion Warfare": 4,
       "Tap from Heroes": 0,
       "Companion": 1,
-      "All Prob": 1
+      "All Prob": 1,
+      "QoL": 0
    },
    "Shadow Clone": {
       "Tap": 0.6,
@@ -61,7 +62,8 @@ const damage = {
       "Companion Warfare": 3.6,
       "Tap from Heroes": 1,
       "Companion": 1,
-      "All Prob": 2.1
+      "All Prob": 2.1,
+      "QoL": 0
    },
    "Heavenly Strike": {
       "Tap": 1,
@@ -93,7 +95,8 @@ const damage = {
       "Companion Warfare": 3.75,
       "Tap from Heroes": 1,
       "Companion": 0,
-      "All Prob": 0
+      "All Prob": 0,
+      "QoL": 0
    },
    "Pet": {
       "Tap": 1,
@@ -125,7 +128,8 @@ const damage = {
       "Companion Warfare": 3.5,
       "Tap from Heroes": 1,
       "Companion": 1,
-      "All Prob": 1.7
+      "All Prob": 1.7,
+      "QoL": 0
    },
    "Dagger": {
       "Tap": 1,
@@ -157,7 +161,8 @@ const damage = {
       "Companion Warfare": 3.65,
       "Tap from Heroes": 1,
       "Companion": 0,
-      "All Prob": 2.3
+      "All Prob": 2.3,
+      "QoL": 0
    },
    "Gold Gun": {
       "Tap": 0.45,
@@ -189,7 +194,8 @@ const damage = {
       "Companion Warfare": 3.9,
       "Tap from Heroes": 1,
       "Companion": 0,
-      "All Prob": 1.6
+      "All Prob": 1.6,
+      "QoL": 0
    }
 };
 
@@ -207,7 +213,8 @@ const gold = {
       "Chesterson chance": 1,
       "Armor": 1,
       "Tactical Insight": 83,
-      "Companion Warfare": 1
+      "Companion Warfare": 1,
+      "QoL": 0
    },
    "Heart of Gold": {
       "All": 1,
@@ -222,7 +229,8 @@ const gold = {
       "Chesterson chance": 0,
       "Armor": 1,
       "Tactical Insight": 79,
-      "Companion Warfare": 1
+      "Companion Warfare": 1,
+      "QoL": 0
    },
    "Chesterson": {
       "All": 1,
@@ -237,7 +245,8 @@ const gold = {
       "Chesterson chance": 1,
       "Armor": 1,
       "Tactical Insight": 78,
-      "Companion Warfare": 1
+      "Companion Warfare": 1,
+      "QoL": 0
    }
 }
 
