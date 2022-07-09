@@ -17,7 +17,7 @@
                <option value="Dagger">Dagger</option>
                <option value="Gold Gun">Gold Gun</option>
            </select> 
-   </div>
+    </div>
   <div class="curGold">
      <label for="goldtypes">Gold Type:&nbsp</label>
          <select name="goldtypes" id="GoldType">
@@ -25,12 +25,30 @@
              <option value="Heart of Gold">Heart of Gold</option>
              <option value="Chesterson">Chesterson</option>
          </select> 
- </div>
+    </div>
+    <div>
+      <!-- <div>Equipment Sets:&nbsp</div> -->
+      <label for="RF">Reckless Firepower:</label>
+      <input type="hidden" name="RF" value="0" />
+      <input type="checkbox" name="RF" value="3" /><br>
+      <label for="AK">Azure Knight:</label>
+      <input type="hidden" name="AK" value="0" />
+      <input type="checkbox" name="AK" value="1" /><br>
+      <label for="CC">Chained Clockwork:</label>
+      <input type="hidden" name="CC" value="0" />
+      <input type="checkbox" name="CC" value="1" /><br>
+      <label for="Staff">Mystic Staff:</label>
+      <input type="hidden" name="Staff" value="0" />
+      <input type="checkbox" name="Staff" value="1.1" /><br>
+    </div>
   </body>
 
   <script type="text/javascript" src="javascripts/reductions.js"></script>
   <script type="text/javascript" src="javascripts/calculate.js"></script>
   <script type="text/javascript" src="javascripts/skilltreeinfo.js"></script>
+  <script type="text/javascript" src="javascripts/LimitBreak.js"></script>
+  <script type="text/javascript" src="javascripts/ManaSiphon.js"></script>
+  <script type="text/javascript" src="javascripts/ManaCalc.js"></script>
   <script>
     var ChoiceDamage = DmgType.value;
     var ChoiceGold = GoldType.value;
