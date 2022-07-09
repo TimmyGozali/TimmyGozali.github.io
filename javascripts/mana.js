@@ -352,70 +352,70 @@ const puppet = {
 
 const fury = {
    "0": {
-      "Bonus Taps": 0
+      "bonus taps": 0
    },
    "1": {
-      "Bonus Taps": 1
+      "bonus taps": 1
    },
    "2": {
-      "Bonus Taps": 2
+      "bonus taps": 2
    },
    "3": {
-      "Bonus Taps": 3
+      "bonus taps": 3
    },
    "4": {
-      "Bonus Taps": 4
+      "bonus taps": 4
    },
    "5": {
-      "Bonus Taps": 5
+      "bonus taps": 5
    },
    "6": {
-      "Bonus Taps": 6
+      "bonus taps": 6
    },
    "7": {
-      "Bonus Taps": 8
+      "bonus taps": 8
    },
    "8": {
-      "Bonus Taps": 10
+      "bonus taps": 10
    },
    "9": {
-      "Bonus Taps": 12
+      "bonus taps": 12
    },
    "10": {
-      "Bonus Taps": 15
+      "bonus taps": 15
    },
    "11": {
-      "Bonus Taps": 18
+      "bonus taps": 18
    },
    "12": {
-      "Bonus Taps": 21
+      "bonus taps": 21
    },
    "13": {
-      "Bonus Taps": 24
+      "bonus taps": 24
    },
    "14": {
-      "Bonus Taps": 27
+      "bonus taps": 27
    },
    "15": {
-      "Bonus Taps": 30
+      "bonus taps": 30
    },
    "16": {
-      "Bonus Taps": 30
+      "bonus taps": 30
    }
 }
 
 const potion = {
    "0": {
-      "Effect": 1
+      "effect": 1
    },
    "1": {
-      "Effect": 1.5
+      "effect": 1.5
    },
    "2": {
-      "Effect": 1.75
+      "effect": 1.75
    },
    "3": {
-      "Effect": 2
+      "effect": 2
    }
 }
 
