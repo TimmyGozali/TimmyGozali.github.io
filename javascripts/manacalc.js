@@ -70,6 +70,7 @@ function calcMana(lb_level, siphon_level) {
   var regen = (manaPotion * limit[lb_level]["Mana boost"] * (baseRegen + manaSiphon)).toFixed(2);
 
   console.log(regen);
+  return regen
 }
 
 function populate() {
