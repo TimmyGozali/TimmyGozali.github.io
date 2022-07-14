@@ -71,3 +71,16 @@ function calcMana(lb_level, siphon_level) {
 
   console.log(regen);
 }
+
+function populate() {
+  var table = $(#"table");
+
+  for (var i = 0; i < 7; i++) {
+    var row = table.row(i+2);
+
+    for (var j = 0; j < 7; j++) {
+      var cell = row.insertCell(j+2);
+      cell.innerHTML = calcMana(i,j);
+    }
+  }
+}
