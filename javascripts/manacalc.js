@@ -51,21 +51,21 @@ function calcMana() {
   var CC = chained_clockwork(CP);
   
   // get Mystic Staff
-  if $("#staff") == true {
+  if ($("#staff").checked == true) {
     var staff = 1.1;
   } else {
     var staff = 1;
   }
   
   // get Reckless Firepower
-  if $("#RF") == true {
+  if ($("#RF").checked == true) {
     var RF = 3;
   } else {
     var RF = 0;
   }
   
   // get Lucky Foot (All Prob) Art
-  if $("#lucky") == true {
+  if ($("#lucky").checked == true) {
     var lucky = 1.1;
   } else {
     var lucky = 1;
