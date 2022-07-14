@@ -76,10 +76,10 @@ function calcMana(lb_level, siphon_level) {
 function populate() {
   var table = $("#table");
 
-  for (var i = 0; i < 27; i++) {
+  for (var i = 0; i < 26; i++) {
     var row = table.rows[i+2];
 
-    for (var j = 0; j < 27; j++) {
+    for (var j = 0; j < 26; j++) {
       var cell = row.insertCell();
       cell.innerHTML = calcMana(i,j);
     }
