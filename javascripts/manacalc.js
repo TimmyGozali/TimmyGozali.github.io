@@ -53,17 +53,21 @@ function calcMana() {
     var lucky = 1;
   }
   
+  // calc Mana Siphon
   var prob = slash * lucky;
 
-  var baseRegen = curRegen / LB;
-  
   var specAttempts = sClone * CC * NP;
 
   var siphonAttempts = specAttempts + tps + bFury + RF;
 
   var siphonChance = 0.005 * prob;
 
-  var manaSiphon = 60 * siphon[1]["Siphon amount"] * siphonAttempts * siphonChance;
-  
-  console.log(manaSiphon);
+  var manaSiphon = staff * AK * 60 * siphon[1]["Siphon amount"] * siphonAttempts * siphonChance;
+
+  // calc new regen
+  var baseRegen = curRegen / LB;
+
+  var regen = manaPotion * limit[1]["Mana boost"] * manaSiphon;
+
+  console.log(regen);
 }
