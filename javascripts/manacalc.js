@@ -80,7 +80,7 @@ function populate() {
     var row = table.rows[i+2];
 
     for (var j = 0; j < 27; j++) {
-      var cell = row.insertCell(j+2);
+      var cell = row.insertCell();
       cell.innerHTML = calcMana(i,j);
     }
   }
