@@ -12,3 +12,7 @@ th span
   transform: rotate(180deg);
   white-space: nowrap;
 }
+
+table {
+    border-collapse:collapse;
+  }
