@@ -17,7 +17,7 @@ function chained_clockwork(CP) {
 function calcMana() {
   
   var slash = $("#slash").value;
-  var tps = $("#tps").value;
+  var tps = Number($("#tps").value);
   var bFury = fury[$("#bFury").value];
   var sClone = clone[$("#sClone").value];
   var NP = puppet[$("#NP").value];
@@ -59,7 +59,11 @@ function calcMana() {
   
   var specAttempts = sClone * CC * NP;
 
-  var manaSiphon = 60 * siphon[1]["Siphon amount"] * (specAttempts + tps + bFury + RF) * 0.005 * prob;
+  var siphonAttempts = specAttempts + tps + bFury + RF;
+
+  var siphonChance = 0.005 * prob;
+
+  var manaSiphon = 60 * siphon[1]["Siphon amount"] * siphonAttempts * siphonChance;
   
   console.log(manaSiphon);
 }
