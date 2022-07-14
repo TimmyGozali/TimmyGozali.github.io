@@ -67,7 +67,7 @@ function calcMana() {
   // calc new regen
   var baseRegen = curRegen / LB;
 
-  var regen = manaPotion * limit[1]["Mana boost"] * manaSiphon;
+  var regen = (manaPotion * limit[1]["Mana boost"] * (baseRegen + manaSiphon)).toFixed(2);
 
   console.log(regen);
 }
