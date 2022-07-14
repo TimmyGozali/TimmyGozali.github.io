@@ -40,7 +40,7 @@ function calcMana() {
   var sClone = clone[$("#sClone").value];
   var NP = puppet[$("#NP").value];
   var curRegen = $("#curRegen").value;
-  var LB = $("#LB").value;
+  var LB = limit[$("#LB").value]["Mana boost"];
   var manaPotion = potion[$("#manaPotion").value];
   var CP = $("#craft").value;
   
@@ -52,7 +52,7 @@ function calcMana() {
   
   // get Mystic Staff
   if ($("#staff").checked == true) {
-    var staff = 1.1;
+    var staff = 1.2;
   } else {
     var staff = 1;
   }
@@ -71,6 +71,13 @@ function calcMana() {
     var lucky = 1;
   }
   
+  var prob = slash * lucky;
+
+  var baseRegen = curRegen / LB;
   
+  var specAttempts = sClone * CC * NP;
+
+  var manaSiphon = 60 * siphon[1] * (specAttempts + TPS + bFury) * 0.005 * prob;
   
+  console.log(manaSiphon);
 }
