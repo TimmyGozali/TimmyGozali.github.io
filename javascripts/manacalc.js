@@ -73,7 +73,7 @@ function calcMana(lb_level, siphon_level) {
 }
 
 function populate() {
-  var table = $(#"table");
+  var table = $("#table");
 
   for (var i = 0; i < 7; i++) {
     var row = table.row(i+2);
