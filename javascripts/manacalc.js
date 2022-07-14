@@ -34,7 +34,7 @@ function mystic_staff() {
 
 function calcMana() {
   
-  var prob = $("#prob").value;
+  var slash = $("#slash").value;
   var tps = $("#tps").value;
   var bFury = fury[$("#bFury").value];
   var sClone = clone[$("#sClone").value];
