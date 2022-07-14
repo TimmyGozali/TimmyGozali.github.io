@@ -1,3 +1,5 @@
+var $ = function( id ) { return document.getElementById( id ); };
+
 function azure_knight(CP) {
   if ($("#AK").checked == true) {
     return 1.2 * 1.002 ** ((CP - 1) ** 0.8);
