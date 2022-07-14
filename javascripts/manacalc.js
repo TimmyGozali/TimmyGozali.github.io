@@ -14,24 +14,6 @@ function chained_clockwork(CP) {
   }
 }
 
-function reckless_firepower() {
-  var RF = document.getElementById("RF").checked;
-  if (RF == true) {
-    return 3;
-  } else {
-    return 0;
-  }
-}
-
-function mystic_staff() {
-  var staff = document.getElementById("staff").checked;
-  if (staff == true) {
-    return 1.1;
-  } else {
-    return 1;
-  }
-}
-
 function calcMana() {
   
   var slash = $("#slash").value;
