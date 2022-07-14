@@ -59,7 +59,7 @@ function calcMana() {
   
   var specAttempts = sClone * CC * NP;
 
-  var manaSiphon = 60 * siphon[1]["Siphon amount"] * (specAttempts + tps + bFury) * 0.005 * prob;
+  var manaSiphon = 60 * siphon[1]["Siphon amount"] * (specAttempts + tps + bFury + RF) * 0.005 * prob;
   
   console.log(manaSiphon);
 }
