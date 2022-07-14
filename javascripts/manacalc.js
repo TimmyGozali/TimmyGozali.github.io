@@ -14,7 +14,7 @@ function chained_clockwork(CP) {
   }
 }
 
-function calcMana() {
+function calcMana(lb_level, siphon_level) {
   
   var slash = $("#slash").value;
   var tps = Number($("#tps").value);
@@ -62,12 +62,12 @@ function calcMana() {
 
   var siphonChance = 0.005 * prob;
 
-  var manaSiphon = staff * AK * 60 * siphon[1]["Siphon amount"] * siphonAttempts * siphonChance;
+  var manaSiphon = staff * AK * 60 * siphon[siphon_level]["Siphon amount"] * siphonAttempts * siphonChance;
 
   // calc new regen
   var baseRegen = curRegen / LB;
 
-  var regen = (manaPotion * limit[1]["Mana boost"] * (baseRegen + manaSiphon)).toFixed(2);
+  var regen = (manaPotion * limit[lb_level]["Mana boost"] * (baseRegen + manaSiphon)).toFixed(2);
 
   console.log(regen);
 }
