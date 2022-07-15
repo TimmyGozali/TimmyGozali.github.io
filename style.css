@@ -6,6 +6,7 @@ th
 {
   vertical-align: center;
   text-align: center;
+  height: 40px;
 }
 
 th span 
@@ -20,10 +21,13 @@ table, th, td {
   border: 1px solid;
   border-collapse:collapse;
   text-align: center;
+  background-color: #e6b8af;
 }
 
-td {
-  width: 100px;
+#table td {
+  width: 60px;
+  font-size: 14px;
+  height: 21px;
 }
 
 .group-1 {
@@ -88,8 +92,10 @@ td {
 
 #header-ms {
   background-color: #8e7cc3;
+  font-size: 40px;
 }
 
 #header-lb {
   background-color: #6d9eeb;
+  font-size: 40px;
 }
