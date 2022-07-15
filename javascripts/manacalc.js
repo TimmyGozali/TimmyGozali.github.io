@@ -94,11 +94,10 @@ function populate() {
 
       var sumCost = limit[i - 3]["Cumulative cost"] + siphon[j - 1]["Cumulative cost"];
 
-      regenlist["mana regen"] = manaRegen: {
-                                "Siphon Level": j-1,
-                                "LB Level": i-3,
-                                "SP Cost": sumCost                        
-                                };
+      regenlist[manaRegen] = manaRegen;
+      regenlist[manaRegen]["Siphon Level"] = j - 1;
+      regenlist[manaRegen]["LB Level"] = i - 3;
+      regenlist[manaRegen]["SP Cost"] = sumCost;
 
       switch (true) {
         case (sumCost < 20):
