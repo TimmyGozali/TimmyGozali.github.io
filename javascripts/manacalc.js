@@ -87,7 +87,7 @@ function populate() {
 
       var sumCost = limit[i-3]["Cumulative cost"] + siphon[j-1]["Cumulative cost"];
       
-      switch (sumCost) {
+      switch (true) {
         case (sumCost < 20):
           table.rows[i].cells[j].classList.add('group-1');
           break;
