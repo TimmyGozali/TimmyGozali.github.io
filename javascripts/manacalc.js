@@ -78,11 +78,12 @@ function calcMana(lb_level, siphon_level) {
 function populate() {
   var table = $("table");
 
-  for (var i = 0; i < 26; i++) {
+  for (var i = 3; i < table.rows.length; i++) {
     
-    for (var j = 0; j < 26; j++) {
+    
+    for (var j = 1; j < table.rows[i].cells.length; j++) {
       
-      table.rows[i+2].cells[j+2].innerHTML = calcMana(i,j);
+      table.rows[i].cells[j].innerHTML = calcMana(i-3,j-1);
     }
   }
 }
