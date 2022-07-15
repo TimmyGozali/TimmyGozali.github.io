@@ -80,7 +80,10 @@ function calcMana(lb_level, siphon_level) {
 var regenlist = {};
 
 function populate() {
-  var regenlist = new Object;
+  
+  // reset regenlist
+  for (var entry in regenlist) delete regenlist[entry];
+  
   var table = $("table");
 
   for (var i = 3; i < table.rows.length; i++) {
