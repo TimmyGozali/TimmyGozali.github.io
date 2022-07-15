@@ -134,12 +134,23 @@ input {
 select {
   background: transparent;
   margin-left: 5px;
+  border: 1px solid;
 }
 
 td.stat {
   background-color: #93c47d;
+  height: 20px;
 }
 
 td.statinput {
   background-color: #b6d7a8;
+}
+
+div.tablestats table, 
+div.tablestats th, 
+div.tablestats td {
+  border: 1px solid;
+  border-collapse:collapse;
+  text-align: left;
+  font-size: 16px;
 }
