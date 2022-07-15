@@ -161,3 +161,26 @@ function populate() {
   }
   $("tableregen").style.display = "block";
 }
+
+// sort the lists and get best values
+function sorted() {
+  
+  // sort regen list
+  let regenKeys = Object.keys(list_by_regen);
+  let sortedRegenKeys = regenKeys.sort();
+  var sortedRegen = {};
+
+  sortedRegenKeys.forEach((element) => {
+    sortedRegen[element] = list_by_regen[element]
+  });
+
+  // sort SP list
+  let spKeys = Object.keys(list_by_SP);
+  let sortedSPKeys = spKeys.sort();
+  var sortedSP = {};
+
+  sortedSPKeys.forEach((element) => {
+    sortedSP[element] = list_by_SP[element]
+  });
+
+}
