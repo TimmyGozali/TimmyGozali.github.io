@@ -8,16 +8,8 @@
       <link rel="stylesheet" href="style.css">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <script>
-      $(document).ready(function(){
-        $(".tableregen").hide();
-        $(".button").click(function(){
-          $(".tableregen").show();
-        });
-      });
-      </script>
     </head>
+
     <body>
       <!--
     <div class="curDmg">
@@ -173,7 +165,7 @@
     </body> <br>
     <button type="button" class="button" onclick="populate(); return false;">Calculate &rarr;</button>
     <br>
-    <div class="tableregen" id="tableregen" style="display: none">
+    <div class="tableregen" id="tableregen">
       <table id="table">
         <thead>
           <tr>
