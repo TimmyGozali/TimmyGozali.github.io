@@ -19,6 +19,7 @@ th span
 table, th, td {
   border: 1px solid;
   border-collapse:collapse;
+  text-align: center;
 }
 
 td {
