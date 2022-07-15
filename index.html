@@ -28,41 +28,113 @@
              <option value="Chesterson">Chesterson</option>
          </select> 
     </div> <br>
-    <div>Stat Inputs: <br>
-      <!-- <div>Equipment Sets:&nbsp</div> -->
-      <span>Lucky Foot Artifact</span>
-        <input type="checkbox" id="lucky" checked><br>
-      <span>All Probability Slash</span>
-        <input type="number" id="slash" value="1.155"><br>
-      <span>Taps/seconds</span>
-        <input type="number" id="tps" value="20"><br>
-      <span>Barbaric Fury Level</span>
-        <input type="number" id="bFury" value="7"><br>
-      <span>Shadow Clone Level</span>
-        <input type="number" id="sClone" value="35"><br>
-      <span>Nightmare Puppeteer Level</span>
-        <input type="number" id="NP" value="11"><br>
-      <span>Current Mana Regen</span>
-        <input type="number" id="curRegen" value="697.2"><br>
-      <span>Current LB Level</span>
-        <input type="number" id="LB" value="4"><br>
-      <span>Mana Potion Stacks</span>
-        <select name="manaPotion" id="manaPotion">
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select><br>
-      <span>Crafting Power Level</span>
-        <input type="number" id="craft" value="27"><br>
-      <span>Azure Knight:</span>
-        <input type="checkbox" id="AK" checked><br>      
-      <span>Chained Clockwork:</span>
-        <input type="checkbox" id="CC" checked><br>
-      <span>Reckless Firepower:</span>
-        <input type="checkbox" id="RF" checked><br>
-      <span>Mystic Staff:</span>
-        <input type="checkbox" id="staff" checked><br>
+    <div><span style=font-size:24px>Stat Inputs: </span><br>
+      <table class="stats" border="1" style=border-collapse:collapse;>
+      	<tbody>
+        	<tr>
+          		<td>
+                	<span>Lucky Foot Artifact</span>
+                </td>
+            	<td>
+                	<input type="checkbox" id="lucky" checked>
+                </td>
+        	<tr>
+          		<td>
+                	<span>All Probability Slash</span>
+                </td>
+            	<td>
+                	<input type="number" id="slash" value="1.155">
+                </td>
+        	<tr>
+          		<td>
+                	<span>Taps/seconds</span>
+                </td>
+            	<td>
+                	<input type="number" id="tps" value="20">
+                </td>
+        	<tr>
+          		<td>
+                	<span>Barbaric Fury Level</span>
+                </td>
+            	<td>
+                	<input type="number" id="bFury" value="7">
+                </td>
+        	<tr>
+          		<td>
+                	<span>Shadow Clone Level</span>
+                </td>
+            	<td>
+                	<input type="number" id="sClone" value="35"><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Nightmare Puppeteer Level</span>
+                </td>
+            	<td>
+                	<input type="number" id="NP" value="11"><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Current Mana Regen</span>
+                </td>
+            	<td>
+                	<input type="number" id="curRegen" value="697.2"><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Current LB Level</span>
+                </td>
+            	<td>
+                	<input type="number" id="LB" value="4"><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Mana Potion Stacks</span>
+                </td>
+            	<td>
+                	<select name="manaPotion" id="manaPotion">
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                  	</select><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Crafting Power Level</span>
+                </td>
+            	<td>
+                	<input type="number" id="craft" value="27"><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Azure Knight:</span>
+                </td>
+            	<td>
+                	<input type="checkbox" id="AK" checked><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Chained Clockwork:</span>
+                </td>
+            	<td>
+                	<input type="checkbox" id="CC" checked><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Reckless Firepower:</span>
+                </td>
+            	<td>
+                	<input type="checkbox" id="RF" checked><br>
+                </td>
+        	<tr>
+          		<td>
+                	<span>Mystic Staff:</span>
+                </td>
+            	<td>
+                	<input type="checkbox" id="staff" checked><br>
+                </td>      
+      </table>
     </div>
   </body> <br>
   <button type="button" class="button" onclick="populate(); return false;">Calculate &rarr;</button>
