@@ -137,4 +137,5 @@ function populate() {
       }
     }
   }
+  $("tableregen").style.display = "block";
 }
