@@ -9,6 +9,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
   </head>
   <body>
+    <!-->
     <div class="curDmg">
        <label for="dmgtypes">Damage Type:&nbsp</label>
            <select name="dmgtypes" id="DmgType">
@@ -28,70 +29,78 @@
              <option value="Chesterson">Chesterson</option>
          </select> 
     </div> <br>
-    <div><span style=font-size:24px>Stat Inputs: </span><br>
+    -->
+    <div class="tablestats"><span style=font-size:24px>Stat Inputs: </span><br>
       <table class="stats" border="1" style=border-collapse:collapse;>
       	<tbody>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Lucky Foot Artifact</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="checkbox" id="lucky" checked>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>All Probability Slash</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="slash" value="1.155">
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Taps/seconds</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="tps" value="20">
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Barbaric Fury Level</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="bFury" value="7">
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Shadow Clone Level</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="sClone" value="35"><br>
                 </td>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Nightmare Puppeteer Level</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="NP" value="11"><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Current Mana Regen</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="curRegen" value="697.2"><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Current LB Level</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="LB" value="4"><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Mana Potion Stacks</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<select name="manaPotion" id="manaPotion">
                       <option value="0">0</option>
                       <option value="1">1</option>
@@ -99,47 +108,54 @@
                       <option value="3">3</option>
                   	</select><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Crafting Power Level</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="number" id="craft" value="27"><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Azure Knight:</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="checkbox" id="AK" checked><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Chained Clockwork:</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="checkbox" id="CC" checked><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Reckless Firepower:</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="checkbox" id="RF" checked><br>
                 </td>
+          </tr>
         	<tr>
-          		<td>
+          		<td class="stat">
                 	<span>Mystic Staff:</span>
                 </td>
-            	<td>
+            	<td class="statinput">
                 	<input type="checkbox" id="staff" checked><br>
-                </td>      
+                </td>
+          </tr>
+        </tbody>            
       </table>
     </div>
   </body> <br>
   <button type="button" class="button" onclick="populate(); return false;">Calculate &rarr;</button>
   <br>
-  <div>
+  <div class="tableregen">
     <table id="table">
         <thead>
           <tr>

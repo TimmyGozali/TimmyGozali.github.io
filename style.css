@@ -17,7 +17,9 @@ th span
   text-align: center;
 }
 
-table, th, td {
+div.tableregen table, 
+div.tableregen th, 
+div.tableregen td {
   border: 1px solid;
   border-collapse:collapse;
   text-align: center;
@@ -123,6 +125,21 @@ table, th, td {
 }
 
 input {
+  text-align: left;
+  background: transparent;
   border: none;
-  border-color: transparent;
+  margin-left: 5px;
+}
+
+select {
+  background: transparent;
+  margin-left: 5px;
+}
+
+td.stat {
+  background-color: #93c47d;
+}
+
+td.statinput {
+  background-color: #b6d7a8;
 }
