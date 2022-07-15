@@ -1,4 +1,6 @@
-var $ = function( id ) { return document.getElementById( id ); };
+var $ = function(id) {
+  return document.getElementById(id);
+};
 
 function azure_knight(CP) {
   if ($("AK").checked == true) {
@@ -17,7 +19,7 @@ function chained_clockwork(CP) {
 }
 
 function calcMana(lb_level, siphon_level) {
-  
+
   var slash = $("slash").value;
   var tps = Number($("tps").value);
   var bFury = fury[$("bFury").value];
@@ -27,34 +29,34 @@ function calcMana(lb_level, siphon_level) {
   var LB = limit[$("LB").value]["Mana boost"];
   var manaPotion = potion[$("manaPotion").value];
   var CP = $("craft").value;
-  
+
   // get Azure Knight
   var AK = azure_knight(CP);
-  
+
   // get Chained Clockwork
   var CC = chained_clockwork(CP);
-  
+
   // get Mystic Staff
   if ($("staff").checked == true) {
     var staff = 1.2;
   } else {
     var staff = 1;
   }
-  
+
   // get Reckless Firepower
   if ($("RF").checked == true) {
     var RF = 3;
   } else {
     var RF = 0;
   }
-  
+
   // get Lucky Foot (All Prob) Art
   if ($("lucky").checked == true) {
     var lucky = 1.1;
   } else {
     var lucky = 1;
   }
-  
+
   // calc Mana Siphon
   var prob = slash * lucky;
 
@@ -79,14 +81,14 @@ function populate() {
   var table = $("table");
 
   for (var i = 3; i < table.rows.length; i++) {
-    
-    
-    for (var j = 1; j < table.rows[i].cells.length; j++) {
-      
-      table.rows[i].cells[j].innerHTML = calcMana(i-3,j-1);
 
-      var sumCost = limit[i-3]["Cumulative cost"] + siphon[j-1]["Cumulative cost"];
-      
+
+    for (var j = 1; j < table.rows[i].cells.length; j++) {
+
+      table.rows[i].cells[j].innerHTML = calcMana(i - 3, j - 1);
+
+      var sumCost = limit[i - 3]["Cumulative cost"] + siphon[j - 1]["Cumulative cost"];
+
       switch (true) {
         case (sumCost < 20):
           table.rows[i].cells[j].classList.add('group-1');
