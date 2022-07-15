@@ -80,7 +80,7 @@ function calcMana(lb_level, siphon_level) {
 var regenlist = {};
 
 function populate() {
-  var regenlist = {};
+  var regenlist = new Object;
   var table = $("table");
 
   for (var i = 3; i < table.rows.length; i++) {
@@ -94,11 +94,11 @@ function populate() {
 
       var sumCost = limit[i - 3]["Cumulative cost"] + siphon[j - 1]["Cumulative cost"];
 
-      regenlist[manaRegen] = {
-                              "Siphon Level": j - 1,
-                              "LB Level": i - 3,
-                              "SP Cost": sumCost
-                             };
+      regenlist[manaRegen] = {};
+      regenlist[manaRegen]["Siphon Level"] = j - 1;
+      regenlist[manaRegen]["LB Level"] = i - 3;
+      regenlist[manaRegen]["SP Cost"] = sumCost;
+
       switch (true) {
         case (sumCost < 20):
           table.rows[i].cells[j].classList.add('group-1');
