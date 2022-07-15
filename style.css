@@ -23,6 +23,9 @@ div.tableregen td {
   border: 1px solid;
   border-collapse:collapse;
   text-align: center;
+}
+
+.tableregen {
   background-color: #e6b8af;
 }
 
