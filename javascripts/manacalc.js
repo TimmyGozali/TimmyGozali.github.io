@@ -195,7 +195,7 @@ function sorted() {
 }
 
 var suggested;
-var better;
+var better = "None Found";
 
 function suggestion(regen) {
 
@@ -211,25 +211,27 @@ function suggestion(regen) {
   };
 
   for (keys in sortedSP) {
-    if (keys > suggested && sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"]) {
+    if (Number(keys) > Number(suggested) && sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"]) {
       var better = keys;
-    } else {
-      var better = "None Found";
+      break;
     }
   };
+
+  console.log("s" + suggested);
+  console.log("b" + better);
 
   $("suggestedRegen").innerHTML = suggested;
   $("suggestedSiphon").innerHTML = sortedRegen[suggested]["Siphon Level"];
   $("suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
   $("suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
 
-  if (better != "None Found") {
+  if (better == "None Found") {
+    document.getElementsByClassName("better").innerHTML = "None Found";
+  } else {
     $("betterRegen").innerHTML = better;
     $("betterSiphon").innerHTML = sortedRegen[better]["Siphon Level"];
     $("betterLB").innerHTML = sortedRegen[better]["LB Level"];
     $("betterCost").innerHTML = sortedRegen[better]["SP Cost"];
-  } else {
-    document.getElementsByClassName("better").innerHTML = better;
   };
 
 }
