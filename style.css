@@ -2,7 +2,7 @@
   font-family: sans-serif;
 }
 
-th 
+div.tableregen th 
 {
   vertical-align: center;
   text-align: center;
@@ -156,4 +156,29 @@ div.tablestats td {
   border-collapse:collapse;
   text-align: left;
   font-size: 16px;
+}
+
+#left{
+  float:left;
+  margin-right: 50px;
+}
+
+#right {
+  float:left;
+  width: 500p
+}
+
+div.suggestion th {
+  background-color: #e69138;
+  border: 1px solid;
+}
+
+div.suggestion td {
+  background-color: #f9cb9c;
+  border: 1px solid;
+  text-align: center
+}
+
+div.suggestion table{
+  border: 1px solid;
 }
