@@ -1,9 +1,11 @@
+/*
 var $ = function(id) {
   return document.getElementById(id);
 };
+*/
 
 function azure_knight(CP) {
-  if ($("AK").checked == true) {
+  if ($("#AK").checked == true) {
     return 1.2 * 1.002 ** ((CP - 1) ** 0.8);
   } else {
     return 1;
@@ -11,7 +13,7 @@ function azure_knight(CP) {
 }
 
 function chained_clockwork(CP) {
-  if ($("CC").checked == true) {
+  if ($("#CC").checked == true) {
     return 1.5 * 1.005 ** ((CP - 1) ** 0.8);
   } else {
     return 1;
@@ -20,15 +22,15 @@ function chained_clockwork(CP) {
 
 function calcMana(lb_level, siphon_level) {
 
-  var slash = $("slash").value;
-  var tps = Number($("tps").value);
-  var bFury = fury[$("bFury").value];
-  var sClone = clone[$("sClone").value];
-  var NP = puppet[$("NP").value];
-  var curRegen = $("curRegen").value;
-  var LB = limit[$("LB").value]["Mana boost"];
-  var manaPotion = potion[$("manaPotion").value];
-  var CP = $("craft").value;
+  var slash = $("#slash").value;
+  var tps = Number($("#tps").value);
+  var bFury = fury[$("#bFury").value];
+  var sClone = clone[$("#sClone").value];
+  var NP = puppet[$("#NP").value];
+  var curRegen = $("#curRegen").value;
+  var LB = limit[$("#LB").value]["Mana boost"];
+  var manaPotion = potion[$("#manaPotion").value];
+  var CP = $("#craft").value;
 
   // get Azure Knight
   var AK = azure_knight(CP);
@@ -37,21 +39,21 @@ function calcMana(lb_level, siphon_level) {
   var CC = chained_clockwork(CP);
 
   // get Mystic Staff
-  if ($("staff").checked == true) {
+  if ($("#staff").checked == true) {
     var staff = 1.2;
   } else {
     var staff = 1;
   }
 
   // get Reckless Firepower
-  if ($("RF").checked == true) {
+  if ($("#RF").checked == true) {
     var RF = 3;
   } else {
     var RF = 0;
   }
 
   // get Lucky Foot (All Prob) Art
-  if ($("lucky").checked == true) {
+  if ($("#lucky").checked == true) {
     var lucky = 1.1;
   } else {
     var lucky = 1;
@@ -86,7 +88,8 @@ function populate() {
   for (var entry in list_by_regen) delete list_by_regen[entry];
   for (var entry in list_by_SP) delete list_by_SP[entry];
 
-  var table = $("table");
+  // loop over table and calculate Mana Regen
+  var table = $("#table");
 
   for (var i = 3; i < table.rows.length; i++) {
 
@@ -159,7 +162,7 @@ function populate() {
       }
     }
   }
-  $("tableregen").style.display = "block";
+  $("#tableregen").style.display = "block";
 }
 
 var sortedRegen = {};
@@ -200,6 +203,7 @@ function suggestion(regen) {
   // sort the regen lists
   sorted();
   
+  // check for suggested levels
   for (keys in sortedRegen) {
       if (keys > regen) {
           var suggested = keys;
@@ -209,10 +213,26 @@ function suggestion(regen) {
 
   for (keys in sortedSP) {
     if (keys > suggested && sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"]) {
-      var better = keys
+      var better = keys;
+    } else {
+      var better = "None Found";
     }
   };
 
-  console.log("Suggested Regen: " + suggested);
-  console.log("Better Regen: " + better);
+  $("#suggestedRegen").innerHTML = suggested;
+  $("#suggestedSiphon").innerHTML = sortedRegen[suggested]["Siphon Level"];
+  $("#suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
+  $("#suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
+
+  if (better != "None Found") {
+    $("#betterRegen").innerHTML = better;
+    $("#betterSiphon").innerHTML = sortedRegen[better]["Siphon Level"];
+    $("#betterLB").innerHTML = sortedRegen[better]["LB Level"];
+    $("#betterCost").innerHTML = sortedRegen[better]["SP Cost"];
+  } else {
+    $(".better").innerHTML = better;
+  };
+
 }
+
+
