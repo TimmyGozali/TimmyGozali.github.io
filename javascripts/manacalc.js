@@ -191,3 +191,28 @@ function sorted() {
   })
 
 }
+
+var suggested;
+var better;
+
+function suggestion(regen) {
+
+  // sort the regen lists
+  sorted();
+  
+  for (keys in sortedRegen) {
+      if (keys > regen) {
+          var suggested = keys;
+          break;
+      }
+  };
+
+  for (keys in sortedSP) {
+    if (keys > suggested && sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"]) {
+      var better = keys
+    }
+  };
+
+  console.log("Suggested Regen: " + suggested);
+  console.log("Better Regen: " + better);
+}
