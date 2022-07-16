@@ -183,7 +183,7 @@ function sorted() {
 
   // sort SP list
   let sortedSPKeys = Object.keys(list_by_regen).sort((a, b) =>
-    list_by_regen[a]["SP Cost"] - list_by_regen[b]["SP Cost"]
+    list_by_regen[a]["SP Cost"] - list_by_regen[b]["SP Cost"] || b - a
   );
 
   sortedSPKeys.forEach((element) => {
