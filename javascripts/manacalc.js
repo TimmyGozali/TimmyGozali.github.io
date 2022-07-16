@@ -211,7 +211,7 @@ function suggestion(regen) {
   };
 
   for (keys in sortedSP) {
-    if (Number(keys) > Number(suggested) && sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"]) {
+    if ((Number(keys) > Number(suggested)) && (sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"])) {
       var better = keys;
       break;
     }
@@ -225,7 +225,7 @@ function suggestion(regen) {
   $("suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
   $("suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
 
-  if (better == "None Found") {
+  if (better != null) {
     document.getElementsByClassName("better").innerHTML = "None Found";
   } else {
     $("betterRegen").innerHTML = better;
