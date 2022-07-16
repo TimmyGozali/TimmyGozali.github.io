@@ -214,19 +214,21 @@ function suggestion(regen) {
     if ((Number(keys) > Number(suggested)) && (sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"])) {
       var better = keys;
       break;
+    } else {
+      var better = "None Found";
     }
   };
-
-  console.log("s" + suggested);
-  console.log("b" + better);
 
   $("suggestedRegen").innerHTML = suggested;
   $("suggestedSiphon").innerHTML = sortedRegen[suggested]["Siphon Level"];
   $("suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
   $("suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
 
-  if (better == null) {
-    document.getElementsByClassName("better").innerHTML = "None Found";
+  if (better == "None Found") {
+    $("betterRegen").innerHTML = better;
+    $("betterSiphon").innerHTML = better;
+    $("betterLB").innerHTML = better;
+    $("betterCost").innerHTML = better;
   } else {
     $("betterRegen").innerHTML = better;
     $("betterSiphon").innerHTML = sortedRegen[better]["Siphon Level"];
