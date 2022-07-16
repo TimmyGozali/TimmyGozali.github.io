@@ -168,6 +168,10 @@ var sortedSP = {};
 // sort the lists and get best values
 function sorted() {
 
+  // reset lists
+  for (var entry in sortedRegen) delete sortedRegen[entry];
+  for (var entry in sortedSP) delete sortedSP[entry];
+
   // sort regen list
   let sortedRegenKeys = Object.keys(list_by_regen).sort((a, b) =>
     a - b
