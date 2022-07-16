@@ -167,21 +167,23 @@ var sortedSP = {};
 
 // sort the lists and get best values
 function sorted() {
-  
+
   // sort regen list
-  let regenKeys = Object.keys(list_by_regen);
-  let sortedRegenKeys = regenKeys.sort();
+  let sortedRegenKeys = Object.keys(list_by_regen).sort((a, b) =>
+    a - b
+  );
 
   sortedRegenKeys.forEach((element) => {
     sortedRegen[element] = list_by_regen[element]
   });
 
   // sort SP list
-  let spKeys = Object.keys(list_by_SP);
-  let sortedSPKeys = spKeys.sort();
+  let sortedSPKeys = Object.keys(list_by_regen).sort((a, b) =>
+    list_by_regen[a]["SP Cost"] - list_by_regen[b]["SP Cost"]
+  );
 
   sortedSPKeys.forEach((element) => {
-    sortedSP[element] = list_by_SP[element]
-  });
+    sortedSP[element] = list_by_regen[element]
+  })
 
 }
