@@ -225,7 +225,7 @@ function suggestion(regen) {
   $("suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
   $("suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
 
-  if (better != null) {
+  if (better == null) {
     document.getElementsByClassName("better").innerHTML = "None Found";
   } else {
     $("betterRegen").innerHTML = better;
