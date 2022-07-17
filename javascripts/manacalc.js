@@ -79,13 +79,11 @@ function calcMana(lb_level, siphon_level) {
 }
 
 var list_by_regen = {};
-var list_by_SP = {};
 
 function populate() {
   
   // reset lists
   for (var entry in list_by_regen) delete list_by_regen[entry];
-  for (var entry in list_by_SP) delete list_by_SP[entry];
 
   // loop over table and calculate Mana Regen
   var table = $("table");
@@ -106,12 +104,6 @@ function populate() {
       list_by_regen[manaRegen]["Siphon Level"] = j - 1;
       list_by_regen[manaRegen]["LB Level"] = i - 3;
       list_by_regen[manaRegen]["SP Cost"] = sumCost;
-
-      // add to SP list
-      list_by_SP[sumCost] = {};
-      list_by_SP[sumCost]["Siphon Level"] = j - 1;
-      list_by_SP[sumCost]["LB Level"] = i - 3;
-      list_by_SP[sumCost]["Mana Regen"] = manaRegen;
 
       switch (true) {
         case (sumCost < 20):
@@ -199,45 +191,49 @@ var better = "None Found";
 
 function suggestion() {
 
-  var neededRegen = Number($("neededRegen").value);
-
-  // sort the regen lists
-  sorted();
-  
-  // check for suggested levels
-  for (keys in sortedRegen) {
-      if (keys > neededRegen) {
-          var suggested = keys;
-          break;
-      }
-  };
-
-  for (keys in sortedSP) {
-    if ((Number(keys) > Number(suggested)) && (sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"])) {
-      var better = keys;
-      break;
-    } else {
-      var better = "None Found";
-    }
-  };
-
-  $("suggestedRegen").innerHTML = suggested;
-  $("suggestedSiphon").innerHTML = sortedRegen[suggested]["Siphon Level"];
-  $("suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
-  $("suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
-
-  if (better == "None Found") {
-    $("betterRegen").innerHTML = better;
-    $("betterSiphon").innerHTML = better;
-    $("betterLB").innerHTML = better;
-    $("betterCost").innerHTML = better;
+  if (Object.keys(list_by_regen).length == 0) {
+    break;
   } else {
-    $("betterRegen").innerHTML = better;
-    $("betterSiphon").innerHTML = sortedRegen[better]["Siphon Level"];
-    $("betterLB").innerHTML = sortedRegen[better]["LB Level"];
-    $("betterCost").innerHTML = sortedRegen[better]["SP Cost"];
-  };
+    var neededRegen = Number($("neededRegen").value);
 
+    // sort the regen lists
+    sorted();
+    
+    // check for suggested levels
+    for (keys in sortedRegen) {
+        if (keys > neededRegen) {
+            var suggested = keys;
+            break;
+        }
+    };
+
+    for (keys in sortedSP) {
+      if ((Number(keys) > Number(suggested)) && (sortedSP[keys]["SP Cost"] < sortedRegen[suggested]["SP Cost"])) {
+        var better = keys;
+        break;
+      } else {
+        var better = "None Found";
+      }
+    };
+
+    $("suggestedRegen").innerHTML = suggested;
+    $("suggestedSiphon").innerHTML = sortedRegen[suggested]["Siphon Level"];
+    $("suggestedLB").innerHTML = sortedRegen[suggested]["LB Level"];
+    $("suggestedCost").innerHTML = sortedRegen[suggested]["SP Cost"];
+
+    if (better == "None Found") {
+      $("betterRegen").innerHTML = better;
+      $("betterSiphon").innerHTML = better;
+      $("betterLB").innerHTML = better;
+      $("betterCost").innerHTML = better;
+    } else {
+      $("betterRegen").innerHTML = better;
+      $("betterSiphon").innerHTML = sortedRegen[better]["Siphon Level"];
+      $("betterLB").innerHTML = sortedRegen[better]["LB Level"];
+      $("betterCost").innerHTML = sortedRegen[better]["SP Cost"];
+    };
+
+  }
 }
 
 
