@@ -127,18 +127,22 @@ button.regenbtn:active {
   transform: translateY(4px);
 }
 
-table.stats input[type="number"] {
-  text-align: left;
+table.stats input {
+  display: inline;
+  text-align: center;
   background: transparent;
   border: none;
-  margin-left: 5px;
-  width: 90%;
+  width: 100%;
 }
 
 select {
+  display: inline;
   background: transparent;
   margin-left: 5px;
   border: 1px solid;
+  width: 100%;
+  border: none;
+  text-align: center;
 }
 
 td.stat {
@@ -235,4 +239,14 @@ table.stats td {
   font-size: 16px;
   table-layout: fixed;
   width: 200px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:focus{
+    outline: none;
 }
