@@ -196,6 +196,9 @@ function suggestion() {
   } else {
     var neededRegen = Number($("neededRegen").value);
 
+    // get new values
+    populate();
+
     // sort the regen lists
     sorted();
     
