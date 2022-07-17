@@ -192,7 +192,7 @@ var better = "None Found";
 function suggestion() {
 
   if (Object.keys(list_by_regen).length == 0) {
-    break;
+    return;
   } else {
     var neededRegen = Number($("neededRegen").value);
 
