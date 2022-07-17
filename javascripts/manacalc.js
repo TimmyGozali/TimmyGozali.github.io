@@ -197,14 +197,16 @@ function sorted() {
 var suggested;
 var better = "None Found";
 
-function suggestion(regen) {
+function suggestion() {
+
+  var neededRegen = Number($("neededRegen").value);
 
   // sort the regen lists
   sorted();
   
   // check for suggested levels
   for (keys in sortedRegen) {
-      if (keys > regen) {
+      if (keys > neededRegen) {
           var suggested = keys;
           break;
       }

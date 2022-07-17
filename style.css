@@ -2,26 +2,24 @@
   font-family: sans-serif;
 }
 
-div.tableregen th 
-{
+div.tableregen th {
   vertical-align: center;
   text-align: center;
   height: 40px;
 }
 
-th span 
-{
+th span {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   white-space: nowrap;
   text-align: center;
 }
 
-div.tableregen table, 
-div.tableregen th, 
+div.tableregen table,
+div.tableregen th,
 div.tableregen td {
   border: 1px solid;
-  border-collapse:collapse;
+  border-collapse: collapse;
   text-align: center;
 }
 
@@ -105,7 +103,7 @@ div.tableregen td {
   font-size: 40px;
 }
 
-.button {
+button.regenbtn {
   padding: 10px 20px;
   font-size: 16px;
   text-align: center;
@@ -119,19 +117,22 @@ div.tableregen td {
   margin-bottom: 20px;
 }
 
-.button:hover {background-color: #3e8e41}
+button.regenbtn:hover {
+  background-color: #3e8e41
+}
 
-.button:active {
+button.regenbtn:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-input {
+table.stats input[type="number"] {
   text-align: left;
   background: transparent;
   border: none;
   margin-left: 5px;
+  width: 90%;
 }
 
 select {
@@ -149,39 +150,89 @@ td.statinput {
   background-color: #b6d7a8;
 }
 
-div.tablestats table, 
-div.tablestats th, 
+div.tablestats table,
+div.tablestats th,
 div.tablestats td {
   border: 1px solid;
-  border-collapse:collapse;
+  border-collapse: collapse;
   text-align: left;
   font-size: 16px;
+  table-layout: fixed;
+  width: 200px;
 }
 
-#left{
-  float:left;
+#left {
+  float: left;
   margin-right: 50px;
 }
 
 #right {
-  float:left;
+  float: left;
   width: 500p
 }
 
-div.suggestion th {
+table.suggestion th {
   background-color: #e69138;
   border: 1px solid;
   width: 150px;
   font-size: 14px;
+  width: 130px;
 }
 
-div.suggestion td {
+table.suggestion td {
   background-color: #f9cb9c;
   border: 1px solid;
   text-align: center;
   height: 24px;
+  width: 130px;
 }
 
-div.suggestion table{
+table.suggestion table {
   border: 1px solid;
+  table-layout: fixed;
+}
+
+div.suggestion table.stats,
+div.suggestion table.stats td {
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+  table-layout: fixed;
+  width: 130px;
+  height: 45px;
+}
+
+button.suggestbtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #ab6d03;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin-bottom: 20px;
+}
+
+button.suggestbtn:hover {
+  background-color: #99602e
+}
+
+button.suggestbtn:active {
+  background-color: #99602e;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+table.stats,
+table.stats td {
+  border: 1px solid;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 16px;
+  table-layout: fixed;
+  width: 200px;
 }

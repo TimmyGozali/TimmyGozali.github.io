@@ -171,6 +171,15 @@
       </div>
 
       <div class="suggestion" id="right"><span style=font-size:24px>Suggestions: </span><br>
+        <table class="stats">
+          <tbody>
+            <tr>
+              <td class="stat">Mana Regen Needed</td>
+              <td class="statinput"><input type="number" id="neededRegen" value="1568.07"></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
         <table class="suggestion" border="1" style=border-collapse:collapse;>
           <thead class="suggestion">
             <tr>
@@ -198,13 +207,15 @@
             </tr>
           </tbody>
         </table>
+        <br>
+        <button type="button" class="suggestbtn" onclick="suggestion(); return false;">Suggest Me &rarr;</button>
       </div>
     </body>
     <br clear="all">
     <div></div>
-      <br>
-        <button type="button" class="button" onclick="populate(); return false;">Calculate &rarr;</button>
-      <br>
+    <br>
+    <button type="button" class="regenbtn" onclick="populate(); return false;">Calculate &rarr;</button>
+    <br>
     </div>
     <div class="tableregen" id="tableregen" style="display: none">
       <table id="table">
