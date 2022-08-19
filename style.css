@@ -90,6 +90,40 @@ body {
   border-radius: 10px;
 }
 
+@media (max-width: 450px) {
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links,
+  .vl {
+    display: none;
+    width: 100%;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    text-align: center;
+  }
+
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -119,19 +153,29 @@ th span {
   text-align: center;
 }
 
-.tableregen {
-  padding-right: 1rem;
+.view {
   padding-left: 1rem;
-  overflow-x: scroll;
-  overflow-y: visible;
+  padding-right: 1rem;
+  margin: auto;
+  height: 753px;
+}
+
+.tableregen {
   width: 100%;
+  position: relative;
+  overflow: auto;
+  white-space: nowrap;
+  border-spacing: 0px;
 }
 
 div.tableregen table,
 div.tableregen th,
 div.tableregen td {
   border: 1px solid;
-  border-collapse: collapse;
+  border-color: rgba(0,0,0,0.6);
+  border-width: 0.01em;
+  border-collapse:separate;
+  border-spacing: 0px;
   text-align: center;
 }
 
@@ -140,16 +184,35 @@ div.tableregen td {
   background-color: #e6b8af;
 }
 
+.sticky-first-col {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 50px;
+  min-width: 50px;
+  max-width: 50px;
+  left: 0px;
+  background-color: #6d9eeb !important;
+}
+
+.sticky-second-col {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 24.58px;
+  min-width: 24.58px;
+  max-width: 24.58x;
+  left: 50px;
+}
+
 #table td {
   width: 60px;
   font-size: 14px;
   height: 21px;
-  padding: 3px;
+  padding: 4px;
   background-color: #e6b8af;
 }
 
 #header-ms {
-  background-color: #8e7cc3;
+  background-color: #8e7cc3 !important;
   font-size: 40px;
 }
 
@@ -358,43 +421,4 @@ select:focus {
 
 .group-15 {
   background-color: #999999 !important;
-}
-
-
-@media (max-width: 450px) {
-  .toggle-button {
-    display: flex;
-  }
-
-  .navbar-links,
-  .vl {
-    display: none;
-    width: 100%;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links li {
-    text-align: center;
-  }
-
-  .navbar-links li a {
-    padding: 0.5rem 1rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-}
-
-@media (max) {
-  
 }
